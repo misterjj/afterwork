@@ -128,20 +128,23 @@ export default class Afterwork extends React.PureComponent<Props, State> {
                                 <span>Je viens !</span>
                             </a>
                         </div>}
-                        {this.state.displayForm && !this.state.endForm && <form className="mb-4" action=""  onSubmit={this.sendEmail.bind(this)}>
+                        {this.state.displayForm && !this.state.endForm &&
+                        <form className="mb-4" action="" onSubmit={this.sendEmail.bind(this)}>
                             <div className="row">
                                 <div className="col">
-                                    <input ref={this.firstNameRef} type="text" className="form-control" placeholder="Nom" required={true}/>
+                                    <input ref={this.firstNameRef} type="text" className="form-control"
+                                           placeholder="Nom" required={true}/>
                                 </div>
                                 <div className="col">
-                                    <input ref={this.lastNameRef} type="text" className="form-control" placeholder="Prénom" required={true}/>
+                                    <input ref={this.lastNameRef} type="text" className="form-control"
+                                           placeholder="Prénom" required={true}/>
                                 </div>
                             </div>
                             <label className="d-flex mt-2">
                                 <Switch onChange={(checked) => this.setState({...this.state, withPartner: checked})}
                                         checked={this.state.withPartner}
                                         onColor="#09647b"/>
-                                <span className="flex-grow-1 align-self-center ms-1"  >Je viens accompagné(e)</span>
+                                <span className="flex-grow-1 align-self-center ms-1">Je viens accompagné.e</span>
                             </label>
                             <label className="d-flex mt-2">
                                 <Switch onChange={(checked) => {
@@ -150,7 +153,7 @@ export default class Afterwork extends React.PureComponent<Props, State> {
                                 }}
                                         checked={this.state.loveJJ}
                                         onColor="#09647b"/>
-                                <span className="flex-grow-1 align-self-center ms-1"  >J'aime d'amour l'organisateur de cet afterwork &lt;3</span>
+                                <span className="flex-grow-1 align-self-center ms-1">J'aime d'amour l'organisateur de cet afterwork &lt;3</span>
                             </label>
                             <button type="submit" className="btn mb-4 mt-4">
                                 <span>Envoyer</span>
@@ -159,13 +162,23 @@ export default class Afterwork extends React.PureComponent<Props, State> {
                         </form>
                         }
                         {this.state.displayForm && this.state.endForm &&
+                        <div className="endForm mb-3">
                             <h2 className="text-center mb-4">Merci !<br/><small>DES BISOUS</small></h2>
+                            <div className="row">
+                                <div className="col-3 text-end">
+                                    <FontAwesomeIcon icon="map-marker-alt" size="3x"/>
+                                </div>
+                                <div className="col-9 align-self-center">
+                                    <a href="https://www.google.com/maps/place/57+Rue+du+Mar%C3%A9chal+Foch,+59100+Roubaix/@50.688217,3.1723133,17z/data=!3m1!4b1!4m5!3m4!1s0x47c328ed910524e7:0x81cd6c906ed6e130!8m2!3d50.688217!4d3.174502" target="_blank">57 rue de maréchal Foch, 59100 Roubaix</a>
+                                </div>
+                            </div>
+                        </div>
                         }
                     </div>
                     <p className="text-center">
                         <FontAwesomeIcon icon="exclamation-triangle"/> Attention <FontAwesomeIcon
                         icon="exclamation-triangle"/> <br/>
-                        je vous demande de vacciné où tester avant de venir
+                        je vous demande de vacciné.e où testé.e avant de venir
                     </p>
                 </div>
             </div>
@@ -183,13 +196,13 @@ export default class Afterwork extends React.PureComponent<Props, State> {
         formData.append('msg', "Vient accompagné(e) : " + this.state.withPartner);
 
         axios.post('https://www.jonathanjorand.fr/mail.php', formData)
-        .then((response) => {
-            this.setState({...this.state, endForm: true})
-        })
-        .catch((error) => {
-            alert("error")
-            console.log(error)
-        });
+            .then((response) => {
+                this.setState({...this.state, endForm: true})
+            })
+            .catch((error) => {
+                alert("error")
+                console.log(error)
+            });
 
         return false
     }

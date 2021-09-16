@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Roboto&display=swap');
 
 
-$background-color: #111;
+$background-color: #222;
 $blue-color: #1489A6;
 $blue-color-darker: #09647b;
 $background-slope: -10deg;
@@ -176,6 +176,12 @@ section.background {
       &:nth-child(1):hover ~ span:nth-child(2) {
         clip-path: polygon(0% 0%, 0 0, 0 50%, 0 100%, 0% 100%);
       }
+    }
+  }
+
+  .endForm {
+    a {
+      color: white;
     }
   }
 
