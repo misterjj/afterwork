@@ -1,0 +1,45 @@
+{
+  "name": "afterwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misterjj/afterwork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misterjj/afterwork/issues"
+  },
+  "homepage": "https://github.com/misterjj/afterwork#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.21",
+    "@types/react-dom": "^17.0.9",
+    "bootstrap": "^5.1.1",
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "sass": "^1.41.0",
+    "sass-loader": "^12.1.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "axios": "^0.21.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-switch": "^6.0.0"
+  }
+}
