@@ -49,7 +49,7 @@ export default class Afterwork extends React.PureComponent<Props, State> {
 
         this.state = {
             icons: [],
-            displayForm: true,
+            displayForm: false,
             endForm: false,
             loveJJ: true,
             withPartner: false
@@ -95,7 +95,7 @@ export default class Afterwork extends React.PureComponent<Props, State> {
                         AFTER<br/>
                         WORK
                     </h1>
-                    <h2 className="text-center mb-4 mt-4">Chez Jonathan j.</h2>
+                    <h2 className="text-center mb-4 mt-4">Chez Jonathan J.</h2>
                     <div>
                         {!this.state.displayForm && <div className="presentation">
                             <div className="row mb-1">
@@ -181,19 +181,6 @@ export default class Afterwork extends React.PureComponent<Props, State> {
         formData.append('mail', "afterwork@afterwork.com");
         formData.append('sujet', "afterwork");
         formData.append('msg', "Vient accompagné(e) : " + this.state.withPartner);
-
-        let data = {
-            nom: this.firstNameRef.current.value
-        }
-
-        // await fetch('https://www.jonathanjorand.fr/mail.php', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // });
 
         axios.post('https://www.jonathanjorand.fr/mail.php', formData)
         .then((response) => {
