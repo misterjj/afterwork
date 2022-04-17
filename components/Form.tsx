@@ -44,7 +44,7 @@ export default class Form extends React.PureComponent<Props, State> {
                            placeholder="Prénom" required={true}/>
                 </div>
                 <div className="col-md-6 col-sm-12">
-                    <label className="d-flex">
+                    <label className="d-flex mt-2">
                         <Switch onChange={(checked) => this.setState({...this.state, withPartner: checked})}
                                 checked={this.state.withPartner}
                                 onColor="#ff0000"/>
