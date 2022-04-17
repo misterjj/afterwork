@@ -66,7 +66,7 @@ export default class Afterwork extends React.PureComponent<Props, State> {
                                     <FontAwesomeIcon icon="beer" size="2x" />
                                 </div>
                                 <div className="col-9 align-self-center"><h5>Vous êtes en charge des boissons <br/>
-                                    <small>*Penssez aux softs, bande de poches*</small></h5></div>
+                                    <small>*Penser aux softs, bande de poches*</small></h5></div>
                             </div>
                         </div>
                     </div>
